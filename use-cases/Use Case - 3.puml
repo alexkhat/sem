@@ -1,0 +1,13 @@
+@startuml
+
+actor DepartmentManager as "Department Manager"
+rectangle Database
+
+rectangle "HR System" {
+    usecase UC3 as "Produce report\non salary of employees\nin my department"
+
+    DepartmentManager - UC3
+    UC3 - Database
+}
+
+@enduml
